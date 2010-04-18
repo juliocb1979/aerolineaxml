@@ -1,23 +1,26 @@
-
 package comunicacion_rmi;
 
 import java.rmi.Naming;
 
-/**
- *
- * @author   Daniel Pirela
-   @author   Mary Carrascal
-   @author   Alfredo Haddad
- */
-public class ConexionRemoto {
 
+/**
+ * @author Angelica Omaña
+ * @author Mary Carrascal
+ * @author Luis Figueras
+ * @author Emmanuel Ortiz
+ * @author Juan Escalante
+ * @author Gustavo Briceño
+ */
+
+public class ConexionRemoto
+{
     private String ip;
     private int port;
     private String url;
     private IServidorRemoto obj = null;
 
-    public IServidorRemoto ConexionRemota (){
-
+    public IServidorRemoto ConexionRemota ()
+    {
         ip = java.util.ResourceBundle.getBundle("configuracion").getString("ip");
 
         String puert = java.util.ResourceBundle.getBundle("configuracion").getString("puerto_rmi"); // Del archivo de propiedades le paso el parametro de servicio
@@ -37,7 +40,6 @@ public class ConexionRemoto {
         }
 
         return obj;
-
     }
 
 }

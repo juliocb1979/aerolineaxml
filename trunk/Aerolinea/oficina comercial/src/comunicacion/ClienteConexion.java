@@ -33,7 +33,7 @@ public class ClienteConexion
         puerto = port;
     }
 
-        public void ClienteConexion2()
+    public void ClienteConexion2()
     {
         String p = java.util.ResourceBundle.getBundle("configConexion").getString("puertoConex2"); // Del archivo de propiedades le paso el parametro de servicio
         int port = Integer.parseInt(p);
@@ -76,7 +76,6 @@ public class ClienteConexion
             catch (Exception e)
             {
                 System.out.println("No puede abrirse la conexion con "+host+", causa: "+e.getMessage());
-
                 conexion = null;
                 ClienteConexion2();
                 abrirConexion();

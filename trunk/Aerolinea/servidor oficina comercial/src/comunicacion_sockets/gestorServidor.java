@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package comunicacion_sockets;
 
 import comunicacion_rmi.ConexionRemoto;
@@ -22,12 +17,18 @@ import org.jdom.*;
 import org.jdom.input.*;
 import org.jdom.output.XMLOutputter;
 
+
 /**
- *
+ * @author Angelica Omaña
+ * @author Mary Carrascal
  * @author Luis Figueras
+ * @author Emmanuel Ortiz
+ * @author Juan Escalante
+ * @author Gustavo Briceño
  */
 
-public class gestorServidor implements Runnable, Serializable  {
+public class gestorServidor implements Runnable, Serializable
+{
     private ObjectOutputStream salida = null;
     private ObjectInputStream entrada = null;
     private Socket SocketCliente;
@@ -35,89 +36,111 @@ public class gestorServidor implements Runnable, Serializable  {
     private IServidorRemoto obj= null;
 
 
- public gestorServidor() {
-    }
-    public gestorServidor(Socket conex) {
-    SocketCliente = conex;
-}
+     public gestorServidor()
+     {
 
-    public void run() {
+     }
 
-        try {
+     public gestorServidor(Socket conex)
+     {
+        SocketCliente = conex;
+     }
+
+    public void run()
+    {
+
+        try
+        {
             // Paso 3: obtener flujos para enviar y recibir datos
             obtenerFlujos();
-        } catch (IOException ex) {
+        } 
+        catch (IOException ex)
+        {
             ex.printStackTrace();
         }
 
         // Paso 4: procesar la conexion
-        try {
-               // recibe los mensajes enviados por el Cliente
-           String  mensajeCliente = recibirMensaje();
-
-
-           //Envio de objeti hacia servidor RMI, resp es la respuesta devuelta por servidor rmi
-
-
-           String respServAdm = null;
         try
+        {
+           // recibe los mensajes enviados por el Cliente Socket de oficina comercial
+           String  mensajeCliente = recibirMensaje();
+           System.out.println (mensajeCliente);
+
+           //Envio de objeto hacia servidor RMI, resp es la respuesta devuelta por servidor rmi
+           String respServAdm = null;
+           try
            {
                 ConexionRemoto objeto = new ConexionRemoto();
                 obj = objeto.ConexionRemota();
+                //Ida
                 obj.Ingresar(mensajeCliente);
+                //Vuelta
                 respServAdm = obj.Respuesta();
+                System.out.println (respServAdm);
            }
            catch  (Exception e)
            {
            }
 
-
-              // enviar respuesta al Servidor
-//               enviarMensaje(mensajeCliente);
-               enviarMensaje(respServAdm);
-        } catch (Exception e) {
+           // envia respuesta al cliente de oficina comercial
+           enviarMensaje(respServAdm);
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
-             System.out.println("Error al realizar lectura de los flujos");
+            System.out.println("Error al realizar lectura de los flujos");
             return;
-        } finally {
-            try {
-//                 cerrar los flujos de I/O y el socket de comunicacion
-                if (entrada != null) {
+        } 
+        finally
+        {
+            try 
+            {
+                //cerrar los flujos de I/O y el socket de comunicacion
+                if (entrada != null)
+                {
                     entrada.close();
                 }
-                if (salida != null) {
+                if (salida != null)
+                {
                     salida.close();
                 }
                 SocketCliente.close();
-            } catch (Exception e) {
+            } 
+            catch (Exception e)
+            {
                 e.printStackTrace();
             }
         }
     }
 
-    public void obtenerFlujos () throws IOException{
-
+    public void obtenerFlujos () throws IOException
+    {
         entrada = new ObjectInputStream( SocketCliente.getInputStream() );
         salida = new ObjectOutputStream( SocketCliente.getOutputStream() );
         salida.flush(); // vaciar búfer de salida para enviar información de encabezado
     }
 
-    public String recibirMensaje () throws ClassNotFoundException{
-           String mensajeCliente=null;
-           try {
+    public String recibirMensaje () throws ClassNotFoundException
+    {
+        String mensajeCliente=null;
+        try
+        {
            //Aquí se recibe el mensaje del cliente y se imprime
            mensajeCliente = (String)entrada.readObject();
-           System.out.println(mensajeCliente);
-           }catch (IOException excepcionES){
-              excepcionES.printStackTrace(); }
-           return mensajeCliente;
+        }
+        catch (IOException excepcionES)
+        {
+            excepcionES.printStackTrace();
+        }
+        return mensajeCliente;
     }
 
     /*
      * Este metodo envia la descripcion del modelo de computadora que
      * eligio el cliente
      */
-    public void enviarMensaje(String mensajeCliente){
+    public void enviarMensaje(String mensajeCliente)
+    {
         
         try
         {
