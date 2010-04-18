@@ -8,7 +8,6 @@ import java.net.Socket;
 import java.util.Vector;
 
 
-
 /**
  * @author Angelica Omaña
  * @author Mary Carrascal
@@ -34,8 +33,6 @@ public class Servidor implements Runnable
     public Servidor(int p)
     {
         this.puerto = p;
-
-
     }
 
     public Servidor() {
@@ -48,8 +45,8 @@ public class Servidor implements Runnable
      * al servidor por lo que se inicia un nuevo hilo
      * GestorServidor para el manejo de las peticiones del Cliente.
      */
-    private void procesarConexion(Socket connection) {
-
+    private void procesarConexion(Socket connection)
+    {
         miHilo= new Thread(new gestorServidor(connection));
         miHilo.start();
     }
@@ -67,13 +64,14 @@ public class Servidor implements Runnable
      */
 
 	
-        public void run() {
-		ServerSocket serverSocket = null;
-		
-		Socket communicationSocket;
-		
-		try
-                {
+        public void run()
+        {
+            ServerSocket serverSocket = null;
+
+            Socket communicationSocket;
+
+            try
+            {
                 serverSocket = new ServerSocket(puerto);
                 //Ciclo infinito para atender peticiones de los clientes
                 while(true)
@@ -82,38 +80,37 @@ public class Servidor implements Runnable
                     {
                         communicationSocket = serverSocket.accept();
                         procesarConexion(communicationSocket);
-                        
+
                     }
-                     catch (Exception e)
+                    catch (Exception e)
                     {
                         System.out.println("Error al tratar de aceptar la conexion");
                     }
                 }
-		}
+            }
             catch (IOException e)
             {
                 System.out.println("El servidor no pudo ser iniciado, causa: "+e.getMessage());
-		return;
+                return;
             }
-	}
+        }
 	
 	/**
 	 *  Inicia un nuevo hilo de servicio
 	 */
 	public void iniciarServidor()
     {
-            System.out.println("Servidor Iniciado");
-            new Thread(this).start();
-           
+        System.out.println("Servidor Iniciado");
+        new Thread(this).start();
 	}
 	
 	/**
 	 * Inicia un nuevo servidor en modo Consola. 
 	 * @param args argumentos de entrada
 	 */
+
 	public static void main(String args[]) throws IOException
     {
-
         String puert = java.util.ResourceBundle.getBundle("configuracion").getString("puerto_socket"); // Del archivo de propiedades le paso el parametro de servicio
         int port = Integer.parseInt(puert);
         Servidor  server = new Servidor(port);

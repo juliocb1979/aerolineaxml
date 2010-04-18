@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package comunicacion_rmi;
 
 import java.net.InetAddress;
@@ -31,30 +26,20 @@ public class Servidor extends UnicastRemoteObject implements IServidorRemoto {
     {
         super(p);
 
-        /*le indica a UnicastRemoteObject que se va a disparar con el
-                  ip "p" */
+        /*le indica a UnicastRemoteObject que se va a disparar con el ip "p" */
         puerto = p;
     }
 
     public void Ingresar (String opcion)
     {
-
-//       persona recibido = (persona)aux.elementAt(0);
-//
-//       String nombre = (String)recibido.getNombre();
-
-        System.out.println("Este es el mensaje que recibi del servidor Comercial: "+ opcion);
-//        String respuesta = "Respuesta del servidor Administativo";
-//        Vector vec = new Vector<Object>();
-//        vec.add(respuesta);
-//        return vec;
+        System.out.println(opcion);
     }
 
 
     public String Respuesta()
     {
         String respuesta;
-        respuesta = "Respuesta desde Servidor Administrativo";
+        respuesta = "Desde Server administrativo: Como estas Servidor Comercial?";
         return respuesta;
     }
 

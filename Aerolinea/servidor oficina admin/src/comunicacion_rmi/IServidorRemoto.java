@@ -1,5 +1,8 @@
 package comunicacion_rmi;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.util.Vector;
 
 /**
  * @author Angelica Omaña
@@ -10,10 +13,6 @@ package comunicacion_rmi;
  * @author Gustavo Briceño
  */
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-import java.util.Vector;
-
 /**
  * Interfaz que define los metodos a ser exportados por
  * el Objeto remoto que implemente esta interfaz.
@@ -22,10 +21,9 @@ import java.util.Vector;
  * java.rmi.RemoteException e incluso pueden generar
  * excepciones de otro tipo.
  */
+
 public interface IServidorRemoto extends Remote 
 {
-//    public Vector consultar(String opcion) throws RemoteException;
-
     public void Ingresar(String opcion) throws RemoteException;
     public String Respuesta() throws RemoteException;
 }
