@@ -2,7 +2,7 @@ Actividades de cada uno:
 
 MARY:
 
-Va a ser los reportes:
+Va hacer los reportes:
 - Pasajeros frecuentes
 - Destinos mas vendidos
 - Oficinas con más boletos vendidos
@@ -12,7 +12,7 @@ va a hacer los case segun las peticiones recibidas.
 
 ANGELICA:
 
-Va a hacer la interfaz de la ofina administrativa.
+Va hacer la interfaz de la ofina administrativa.
 y los reportes: 
 - total de clientes que han hecho compras
 

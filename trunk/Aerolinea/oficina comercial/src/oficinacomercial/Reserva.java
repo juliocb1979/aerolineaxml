@@ -11,7 +11,8 @@ import java.io.Serializable;
  * @author Gustavo Briceño
  */
 
-public class Reserva implements Serializable{
+public class Reserva implements Serializable
+{
 
     private String idReserva;
     private String idVuelo;
@@ -21,89 +22,103 @@ public class Reserva implements Serializable{
     private String status;
 
 
-    public Reserva() {}
+    public Reserva() 
+    {
+    }
 
     /**
      * @return the idVuelo
      */
-    public String getIdVuelo() {
+    public String getIdVuelo()
+    {
         return idVuelo;
     }
 
     /**
      * @return the fechaReserva
      */
-    public String getFechaReserva() {
+    public String getFechaReserva()
+    {
         return fechaReserva;
     }
 
     /**
      * @return the fechaCaduca
      */
-    public String getFechaCaduca() {
+    public String getFechaCaduca()
+    {
         return fechaCaduca;
     }
 
     /**
      * @param idVuelo the idVuelo to set
      */
-    public void setIdVuelo(String idVuelo) {
+    public void setIdVuelo(String idVuelo)
+    {
         this.idVuelo = idVuelo;
     }
 
     /**
      * @param fechaReserva the fechaReserva to set
      */
-    public void setFechaReserva(String fechaReserva) {
+    public void setFechaReserva(String fechaReserva)
+    {
         this.fechaReserva = fechaReserva;
     }
 
     /**
      * @param fechaCaduca the fechaCaduca to set
      */
-    public void setFechaCaduca(String fechaCaduca) {
+    public void setFechaCaduca(String fechaCaduca)
+    {
         this.fechaCaduca = fechaCaduca;
     }
 
     /**
      * @return the idReserva
      */
-    public String getIdReserva() {
+    public String getIdReserva()
+    {
         return idReserva;
     }
 
     /**
      * @param idReserva the idReserva to set
      */
-    public void setIdReserva(String idReserva) {
+    public void setIdReserva(String idReserva)
+    {
         this.idReserva = idReserva;
     }
 
     /**
      * @return the idCliente
      */
-    public String getIdCliente() {
+    public String getIdCliente()
+    {
         return idCliente;
     }
 
     /**
      * @param idCliente the idCliente to set
      */
-    public void setIdCliente(String idCliente) {
+    public void setIdCliente(String idCliente)
+    {
         this.idCliente = idCliente;
     }
 
     /**
      * @return the status
      */
-    public String getStatus() {
+    public String getStatus()
+    {
         return status;
     }
 
     /**
      * @param status the status to set
      */
-    public void setStatus(String status) {
+    public void setStatus(String status)
+    {
         this.status = status;
     }
 

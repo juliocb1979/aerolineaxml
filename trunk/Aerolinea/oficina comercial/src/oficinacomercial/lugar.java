@@ -11,7 +11,8 @@ import java.io.Serializable;
  * @author Gustavo Briceño
  */
 
-public class lugar implements Serializable{
+public class lugar implements Serializable
+{
 
     private String idlugar;
     private String nombreLugar;
@@ -19,28 +20,32 @@ public class lugar implements Serializable{
     /**
      * @return the idlugar
      */
-    public String getIdlugar() {
+    public String getIdlugar()
+    {
         return idlugar;
     }
 
     /**
      * @param idlugar the idlugar to set
      */
-    public void setIdlugar(String idlugar) {
+    public void setIdlugar(String idlugar)
+    {
         this.idlugar = idlugar;
     }
 
     /**
      * @return the nombreLugar
      */
-    public String getNombreLugar() {
+    public String getNombreLugar()
+    {
         return nombreLugar;
     }
 
     /**
      * @param nombreLugar the nombreLugar to set
      */
-    public void setNombreLugar(String nombreLugar) {
+    public void setNombreLugar(String nombreLugar)
+    {
         this.nombreLugar = nombreLugar;
     }
 }

@@ -11,7 +11,8 @@ import java.io.Serializable;
  * @author Gustavo Briceño
  */
 
-public class Persona implements Serializable{
+public class Persona implements Serializable
+{
 
     private String nombre;
     private String apellido;
@@ -21,26 +22,31 @@ public class Persona implements Serializable{
     private String estado;
     private String zona;
 
-    public Persona() {}
+    public Persona()
+    {
+    }
 
     /**
      * @return the nombre
      */
-    public String getNombre() {
+    public String getNombre()
+    {
         return nombre;
     }
 
     /**
      * @return the apellido
      */
-    public String getApellido() {
+    public String getApellido()
+    {
         return apellido;
     }
 
     /**
      * @return the cedula
      */
-    public String getCedula() {
+    public String getCedula()
+    {
         return cedula;
     }
 
@@ -48,14 +54,16 @@ public class Persona implements Serializable{
     /**
      * @return the telefono
      */
-    public String getTelefono() {
+    public String getTelefono()
+    {
         return telefono;
     }
 
     /**
      * @return the ciudad
      */
-    public String getCiudad() {
+    public String getCiudad()
+    {
         return ciudad;
     }
 
@@ -63,28 +71,32 @@ public class Persona implements Serializable{
     /**
      * @return the zona
      */
-    public String getZona() {
+    public String getZona()
+    {
         return zona;
     }
 
     /**
      * @param nombre the nombre to set
      */
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
 
     /**
      * @param apellido the apellido to set
      */
-    public void setApellido(String apellido) {
+    public void setApellido(String apellido)
+    {
         this.apellido = apellido;
     }
 
     /**
      * @param cedula the cedula to set
      */
-    public void setCedula(String cedula) {
+    public void setCedula(String cedula)
+    {
         this.cedula = cedula;
     }
 
@@ -92,14 +104,16 @@ public class Persona implements Serializable{
     /**
      * @param telefono the telefono to set
      */
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono)
+    {
         this.telefono = telefono;
     }
 
     /**
      * @param ciudad the ciudad to set
      */
-    public void setCiudad(String ciudad) {
+    public void setCiudad(String ciudad)
+    {
         this.ciudad = ciudad;
     }
 
@@ -107,21 +121,24 @@ public class Persona implements Serializable{
     /**
      * @param zona the zona to set
      */
-    public void setZona(String zona) {
+    public void setZona(String zona)
+    {
         this.zona = zona;
     }
 
     /**
      * @return the estado
      */
-    public String getEstado() {
+    public String getEstado()
+    {
         return estado;
     }
 
     /**
      * @param estado the estado to set
      */
-    public void setEstado(String estado) {
+    public void setEstado(String estado)
+    {
         this.estado = estado;
     }
 }

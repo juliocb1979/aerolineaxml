@@ -1,5 +1,7 @@
 package comunicacion_rmi;
 
+import comunicacion_rmi_mainframe.ConexionRemoto;
+import comunicacion_rmi_mainframe.IServidorRemotoMainframe;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
@@ -19,7 +21,7 @@ import java.util.Vector;
 public class Servidor extends UnicastRemoteObject implements IServidorRemoto {
 
     private int puerto;
-
+    private IServidorRemotoMainframe obj= null;
 
     public Servidor (int p) throws RemoteException
 
@@ -30,19 +32,33 @@ public class Servidor extends UnicastRemoteObject implements IServidorRemoto {
         puerto = p;
     }
 
-    public void Ingresar (String opcion)
+
+    //Aquí se recibe la petición desde servidor comercial
+    public String Ingresar (String opcion)
     {
         System.out.println(opcion);
-    }
 
-
-    public String Respuesta()
-    {
-        String respuesta;
+        //Se procesa respuesta, en éste caso un Strin a retornar por el metodo
+        String respuesta = null;
         respuesta = "Desde Server administrativo: Como estas Servidor Comercial?";
+
+            String respMainframe = null;
+            try
+            {
+                ConexionRemoto objeto = new ConexionRemoto();
+                obj = objeto.ConexionRemota();
+
+                //se envia un mensaje de petición al mainframe
+                //"respServAdm" es la respuesta obtenidad desde el servidor administrativo
+                respMainframe = obj.Peticion("Peticion desde server administrativo");
+                System.out.println (respMainframe);
+            }
+            catch  (Exception e)
+            {
+            }
+
         return respuesta;
     }
-
 
     public void finalize()
     {
@@ -56,6 +72,7 @@ public class Servidor extends UnicastRemoteObject implements IServidorRemoto {
             System.out.println("Error al detener servidor, causa: " + e.toString());
          }
     }
+    
     public boolean registrarServicio()
     {
         try
