@@ -23,6 +23,5 @@ import java.util.Vector;
  */
 public interface IServidorRemoto extends Remote
 {
-    public void Ingresar(String opcion) throws RemoteException;
-    public String Respuesta() throws RemoteException;
+    public String Ingresar(String opcion) throws RemoteException;
 }

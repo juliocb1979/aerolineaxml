@@ -490,7 +490,7 @@ public class GUI extends javax.swing.JFrame {
 
         datosVuelo.setDestino(destino);
         datosVuelo.setFechaSalida(fechaSalida);
-        datosVuelo.setFechaRegreso(fechaRegreso);
+//        datosVuelo.setFechaRegreso(fechaRegreso);
 
         ClienteConexion co = new ClienteConexion();
 //        co.abrirConexion();

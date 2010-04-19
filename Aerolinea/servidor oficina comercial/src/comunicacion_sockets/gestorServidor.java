@@ -72,17 +72,17 @@ public class gestorServidor implements Runnable, Serializable
            {
                 ConexionRemoto objeto = new ConexionRemoto();
                 obj = objeto.ConexionRemota();
-                //Ida
-                obj.Ingresar(mensajeCliente);
-                //Vuelta
-                respServAdm = obj.Respuesta();
+
+                //"mensaje cliente" es el mensaje enviado al servidor administrativo
+                //"respServAdm" es la respuesta obtenidad desde el servidor administrativo
+                respServAdm = obj.Ingresar(mensajeCliente);
                 System.out.println (respServAdm);
            }
            catch  (Exception e)
            {
            }
 
-           // envia respuesta al cliente de oficina comercial
+           // envia respuesta al cliente Socket de oficina comercial
            enviarMensaje(respServAdm);
         }
         catch (Exception e)

@@ -11,68 +11,79 @@ import java.io.Serializable;
  * @author Gustavo Briceño
  */
 
-public class Compra implements Serializable {
+public class Compra implements Serializable
+{
 
     private String idVuelo;
     private String idCliente;
     private String fechaCompra;
     private String idOficina;
 
-    public Compra(){}
+    public Compra()
+    {
+    }
 
     /**
      * @return the idVuelo
      */
-    public String getIdVuelo() {
+    public String getIdVuelo()
+    {
         return idVuelo;
     }
 
     /**
      * @return the fechaCompra
      */
-    public String getFechaCompra() {
+    public String getFechaCompra()
+    {
         return fechaCompra;
     }
 
     /**
      * @param idVuelo the idVuelo to set
      */
-    public void setIdVuelo(String idVuelo) {
+    public void setIdVuelo(String idVuelo)
+    {
         this.idVuelo = idVuelo;
     }
 
     /**
      * @param fechaCompra the fechaCompra to set
      */
-    public void setFechaCompra(String fechaCompra) {
+    public void setFechaCompra(String fechaCompra)
+    {
         this.fechaCompra = fechaCompra;
     }
 
     /**
      * @return the idCliente
      */
-    public String getIdCliente() {
+    public String getIdCliente()
+    {
         return idCliente;
     }
 
     /**
      * @param idCliente the idCliente to set
      */
-    public void setIdCliente(String idCliente) {
+    public void setIdCliente(String idCliente)
+    {
         this.idCliente = idCliente;
     }
 
     /**
      * @return the idOficina
      */
-    public String getIdOficina() {
+    public String getIdOficina()
+    {
         return idOficina;
     }
 
     /**
      * @param idOficina the idOficina to set
      */
-    public void setIdOficina(String idOficina) {
+    public void setIdOficina(String idOficina)
+    {
         this.idOficina = idOficina;
     }
 
