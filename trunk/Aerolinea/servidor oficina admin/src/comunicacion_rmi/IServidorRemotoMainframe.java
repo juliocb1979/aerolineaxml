@@ -22,8 +22,7 @@ import java.util.Vector;
  * excepciones de otro tipo.
  */
 
-public interface IServidorRemoto extends Remote
+public interface IServidorRemotoMainframe extends Remote
 {
-    public String Ingresar(String opcion) throws RemoteException;
-//    public String Respuesta() throws RemoteException;
+    public String Peticion(String opcion) throws RemoteException;
 }
