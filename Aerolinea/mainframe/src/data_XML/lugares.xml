@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LUGARES>
+    <LUGAR>
+        <ID_LUGAR>1</ID_LUGAR>
+        <NOMBRE>caracas</NOMBRE>
+    </LUGAR>
+    <LUGAR>
+        <ID_LUGAR>2</ID_LUGAR>
+        <NOMBRE>barcelona</NOMBRE>
+    </LUGAR>
+    <LUGAR>
+        <ID_LUGAR>3</ID_LUGAR>
+        <NOMBRE>valencia</NOMBRE>
+    </LUGAR>
+    <LUGAR>
+        <ID_LUGAR>4</ID_LUGAR>
+        <NOMBRE>maturin</NOMBRE>
+    </LUGAR>
+    <LUGAR>
+        <ID_LUGAR>5</ID_LUGAR>
+        <NOMBRE>merida</NOMBRE>
+    </LUGAR>
+    <LUGAR>
+        <ID_LUGAR>6</ID_LUGAR>
+        <NOMBRE>san antonio</NOMBRE>
+    </LUGAR>
+</LUGARES>

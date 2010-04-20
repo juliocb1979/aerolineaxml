@@ -1,0 +1,38 @@
+Actividades de cada uno:
+
+MARY:
+
+Va hacer los reportes:
+- Pasajeros frecuentes
+- Destinos mas vendidos
+- Oficinas con más boletos vendidos
+
+En el servidor de la oficina comercial, dentro del metodo recibir
+va a hacer los case segun las peticiones recibidas.
+
+ANGELICA:
+
+Va hacer la interfaz de la ofina administrativa.
+y los reportes: 
+- total de clientes que han hecho compras
+
+
+LUIS:
+
+Va a montar el MAINFRAME,  
+
+balanceo de cargas.
+
+Reportes:
+- total de clinetes que han hecho solo reservas
+- aeronaves que han volado en mas ocasiones.
+
+
+EMMANUEL:
+
+Paso de objetos entre el sevidor administrativo y el MAINFRAME.
+Actualzacion de archivos en el MAINFRAME.
+
+JUAN CARLOS:
+
+Comparacion de las estructuras XML con XMLSCHEMA.

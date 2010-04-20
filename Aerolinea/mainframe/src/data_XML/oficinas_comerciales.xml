@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OFICINAS>
+    <OFICINA>
+        <ID_OFICINA>1</ID_OFICINA>
+        <NOMBRE>AVENSA 1</NOMBRE>
+        <DIRECCION>1</DIRECCION>
+    </OFICINA>
+    <OFICINA>
+        <ID_OFICINA>2</ID_OFICINA>
+        <NOMBRE>AVENSA 45</NOMBRE>
+        <DIRECCION>2</DIRECCION>
+    </OFICINA>
+    <OFICINA>
+        <ID_OFICINA>3</ID_OFICINA>
+        <NOMBRE>AVENSA_8 1</NOMBRE>
+        <DIRECCION>3</DIRECCION>
+    </OFICINA>
+</OFICINAS>
