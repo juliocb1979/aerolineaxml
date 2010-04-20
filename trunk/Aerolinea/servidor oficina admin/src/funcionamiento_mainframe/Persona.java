@@ -1,4 +1,4 @@
-package funcionamiento;
+package funcionamiento_mainframe;
 
 import java.io.Serializable;
 
