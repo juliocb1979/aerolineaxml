@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CLIENTES>
+  <CLIENTE>
+    <NOMBRE>luis</NOMBRE>
+    <APELLIDO>figueras</APELLIDO>
+    <ID_CLIENTE>17224954</ID_CLIENTE>
+    <TELEFONO>04164247105</TELEFONO>
+    <ESTADO>miranda</ESTADO>
+    <CIUDAD>los teques</CIUDAD>
+    <ZONA>independencia</ZONA>
+  </CLIENTE>
+  <CLIENTE>
+    <NOMBRE>mary</NOMBRE>
+    <APELLIDO>carmen</APELLIDO>
+    <ID_CLIENTE>12364965</ID_CLIENTE>
+    <TELEFONO>04144232105</TELEFONO>
+    <ESTADO>distrito capital</ESTADO>
+    <CIUDAD>caracas</CIUDAD>
+    <ZONA>caricuao</ZONA>
+  </CLIENTE>
+  <CLIENTE>
+    <NOMBRE>angelica</NOMBRE>
+    <APELLIDO>omana</APELLIDO>
+    <ID_CLIENTE>14535896</ID_CLIENTE>
+    <TELEFONO>04124332105</TELEFONO>
+    <ESTADO>distrito capital</ESTADO>
+    <CIUDAD>caracas</CIUDAD>
+    <ZONA>las mercedes</ZONA>
+  </CLIENTE>
+  <CLIENTE>
+    <NOMBRE>juan</NOMBRE>
+    <APELLIDO>escalante</APELLIDO>
+    <ID_CLIENTE>12376453</ID_CLIENTE>
+    <TELEFONO>04128592548</TELEFONO>
+    <ESTADO>carabobo</ESTADO>
+    <CIUDAD>valencia</CIUDAD>
+    <ZONA>san luis</ZONA>
+  </CLIENTE>
+</CLIENTES>
+
